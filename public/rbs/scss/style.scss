@@ -1,0 +1,1339 @@
+ /*
+Theme Name: Phoenix - Services HTML Template
+Author: Markhor Themes
+Author URI: https://themeforest.net/user/htmlbeans
+Version: 1
+Description: Base theme for HTML5
+Text Domain: base
+Tags: one-column, two-columns, three-columns
+Theme URI: http://www.htmlbeans.com/html/phoenix/
+*/
+
+
+/*------------------------------------------------------------------
+
+1. import files / import files
+2. Body / body
+3. Wrapper / #wrapper
+4. Header / #header
+5. Logo / .logo
+6. Socail Network / .socail-network
+7. Nav / #nav
+8. Nav Active / .nav-active
+9. Main / #main
+10. Banner / .banner
+11. Main Slider / .main-slider
+12. Btn Primary / .btn-primary
+13. Abt Sec / .abt-sec
+14. Heading / .heading
+15. Heading2 / .heading2
+16. Header / .header
+17. Service List / .service-list
+18. Service Sec / .service-sec
+19. Counter Holder / .counter-holder
+20. Team Sec / .team-sec
+21. Team Col / .team-col
+22. Testimonail Sec / .testimonail-sec
+23. Testimonail Slider / .testimonail-slider
+24. Price Sec / .price-sec
+25. Price Holder / .price-holder
+26. Offer Sec / .offer-sec
+27. Contact Sec / .contact-sec
+28. Fancybox Skin / .fancybox-skin
+29. Popup Holder / .popup-holder
+30. Newsletter Block / .newsletter-block
+31. Footer / #footer
+32. Back Top / #back-top
+33. Loader Holder / .loader-holder
+
+-------------------------------------------------------------------*/
+
+
+
+// devices viewport width starts at:
+$breakpoints: (
+	xs-phone: 480px,
+	phone: 640px,
+	tablet: 768px,
+	desktop: 992px,
+	widescreen: 1200px
+);
+ 
+// keywords
+$media-expressions: (
+	'screen': 'screen',
+	'print': 'print',
+	'handheld': 'handheld',
+	'landscape': '(orientation: landscape)',
+	'portrait': '(orientation: portrait)',
+	'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+	'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+// ligatured operators ≥ ≤
+
+
+/*------------------------------------------------------------------
+1. import files / import files
+-------------------------------------------------------------------*/
+
+//@import 'vendors/include-media';
+
+@import "bootstrap-custom";
+@import "vendors/bootstrap/variables";
+@import "vendors/bootstrap/mixins";
+
+@import 'base/mixins';
+@import 'base/helpers';
+
+
+/*------------------------------------------------------------------
+2. Body / body
+-------------------------------------------------------------------*/
+body{
+    font-weight: 400;
+    margin: 0;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    &.pattern1{background-image: url(images/patterns/pattern1.png);}
+    &.pattern2{background-image: url(images/patterns/pattern2.png);}
+    &.pattern3{background-image: url(images/patterns/pattern3.png);}
+    &.pattern4{background-image: url(images/patterns/pattern4.png);}
+    &.pattern5{background-image: url(images/patterns/pattern5.png);}
+    &.pattern6{background-image: url(images/patterns/pattern6.png);}
+    &.pattern7{background-image: url(images/patterns/pattern7.png);}
+    &.pattern8{background-image: url(images/patterns/pattern8.png);}
+    &.pattern9{background-image: url(images/patterns/pattern9.png);}
+    &.pattern10{background-image: url(images/patterns/pattern10.png);}
+    &.pattern11{background-image: url(images/patterns/pattern11.png);}
+    &.pattern12{background-image: url(images/patterns/pattern12.png);}
+    &.pattern13{background-image: url(images/patterns/pattern13.png);}
+    &.pattern14{background-image: url(images/patterns/pattern14.png);}
+}
+body.boxed-v #wrapper {
+    max-width: 80%;
+    margin: 20px auto;
+    border-radius: 3px;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+a{
+    &:hover,
+    &:focus,
+    &.active{
+        text-decoration: none;
+        outline: none;
+    }
+}
+.overlay{
+    position: relative;
+    z-index: 1;
+    &:before{
+        @include element(0, 0, 0, 0);
+        opacity: 0.8;
+    }
+}
+.bg-full{
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.bg-parallax{
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.bg-light{ background: $clr-4; }
+.round{border-radius: 100%;}
+.md-round{border-radius: 3px;}
+.lg-round{border-radius: 45px;}
+
+.mar-top-xs{margin-top: 30px !important;}
+.mar-top-sm{margin-top: 60px !important;}
+.mar-top-md{margin-top: 90px !important;}
+.pad-top-xs{padding-top: 30px !important;}
+.pad-top-sm{padding-top: 60px !important;}
+.pad-top-md{padding-top: 100px !important;}
+.mar-top-lg{margin-top: 120px !important;}
+.pad-top-lg{padding-top: 120px !important;}
+.mar-bottom-xs{margin-bottom: 30px !important;}
+.mar-bottom-sm{margin-bottom: 60px !important;}
+.mar-bottom-md{margin-bottom: 90px !important;}
+.pad-bottom-sm{padding-bottom: 60px !important;}
+.pad-bottom-xs{padding-bottom: 30px !important;}
+.pad-bottom-md{padding-bottom: 100px !important;}
+.mar-bottom-lg{margin-bottom: 120px !important;}
+.pad-bottom-lg{padding-bottom: 120px !important;}
+.js-tab-hidden {
+    display:block !important;
+    left:-9999px !important;
+    position: absolute !important;
+    top:-9999px !important;
+}
+/*------------------------------------------------------------------
+3. Wrapper / #wrapper
+-------------------------------------------------------------------*/
+#wrapper{ @extend %boxreset; }
+/*------------------------------------------------------------------
+4. Header / #header
+-------------------------------------------------------------------*/
+#header{
+    position: relative;
+    @extend %clearfix;
+    .sticky{
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        z-index: 9;
+        height: auto !important;
+        .home-link{ padding: 17px 15px; }
+        .btn{ margin: 15px 0 0; }
+    }
+    .header-top{
+        overflow: hidden;
+        background: $clr-4;
+        box-shadow:  0 1px 0 0 rgba(238, 238, 238, 1);
+    }
+    .nav-txt{
+        font: 12px/14px $heading-font-family-sans;
+        color: $clr-2;
+        font-weight: 700;
+        float: left;
+        padding: 17px 0 0;
+        .icon{
+            @include font(18px, 20px);
+            display: inline-block;
+            vertical-align: middle;
+            margin: -2px 6px 0 0;
+        }
+    }
+    .header-holder{
+        overflow: hidden;
+        padding-top: 31px;
+        padding-bottom: 36px;
+    }
+    .info-box{
+        overflow: hidden;
+        margin: 0;
+        padding: 7px 0 0;
+        float: right;
+        text-align: right;
+        li{
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 0 0 76px;
+        }
+        .icon{
+            @include font(38px, 40px);
+            margin: 0 20px 0 0;
+        }
+        address{
+            @include font(12px, 14px);
+            color: $clr-1;
+            font-weight: 400;
+            font-style: normal;
+            margin: 0;
+            b{
+                font: 14px/16px $heading-font-family-sans;
+                color: $clr-2;
+                font-weight: 900;
+                display: block;
+                margin: 0 0 7px;
+            }
+        }
+        .tel,
+        .time{
+            font: 14px/16px $heading-font-family-sans;
+            color: $clr-2;
+            font-weight: 900;
+            display: block;
+            margin: 0 0 7px;
+        }
+        .mail,
+        .day{
+            @include font(12px, 14px);
+            color: $clr-1;
+            display: block;
+            text-align: left;
+        }
+    }
+    .nav-holder{
+        background: $clr-5;
+        overflow: hidden;
+        transition: all 0.25s linear;
+    }
+    .home-link{
+        @include font(25px, 30px);
+        color: $white;
+        padding: 23px 15px 22px;
+        margin: 0 27px 0 0;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .btn{
+        font: 13px/15px $heading-font-family-sans;
+        font-weight: 700;
+        color: $clr-6;
+        float: right;
+        padding: 0;
+        margin: 21px 0 0;
+        transition: all 0.25s linear;
+        .icon{
+            @include font(25px, 30px);
+            color: $clr-6;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 10px 0 0;
+            transition: all 0.25s linear;
+        }
+        &:hover{
+            color: $white;
+            outline: none;
+            .icon{ color: $white; }
+        }
+        &:focus{ outline: none; }
+    }
+    .socail-network{ a{ &:hover{ color: $clr-5; } } }
+    .nav-opener{
+        @include font(20px, 30px);
+        color: $white;
+        padding: 5px;
+        float: right;
+        @include size(40px, 40px);
+        transition: all 0.25s linear;
+        .fa-times{ display: none; }
+    }
+}
+/*------------------------------------------------------------------
+5. Logo / .logo
+-------------------------------------------------------------------*/
+.logo{
+    width: 176px;
+    float: left;
+    margin: 5px 10px 0 0;
+}
+/*------------------------------------------------------------------
+6. Socail Network / .socail-network
+-------------------------------------------------------------------*/
+.socail-network{
+    font-size: 0;
+    overflow: hidden;
+    margin: 0;
+    float: right;
+    border-right: 1px solid $clr-7;
+    text-align: right;
+    li{
+        @include font(14px, 16px);
+        text-align: center;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    a{
+        width: 50px;
+        padding: 17px 10px;
+        border-left: 1px solid $clr-7;
+        display: block;
+        transition: all 0.25s linear;
+    }
+}
+/*------------------------------------------------------------------
+7. Nav / #nav
+-------------------------------------------------------------------*/
+#nav{
+    font: 13px/15px $heading-font-family-sans;
+    font-weight: 700;
+    color: $white;
+    overflow: hidden;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    ul{
+        overflow: hidden;
+        margin: 0;
+        li{
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 32px 0 0;
+        }
+        a{
+            color: $white;
+            display: block;
+            transition: all 0.25s linear;
+        }
+    }
+}
+/*------------------------------------------------------------------
+8. Nav Active / .nav-active
+-------------------------------------------------------------------*/
+.nav-active{
+    #header{
+        .nav-holder{
+            opacity: 1;
+            visibility: visible;
+        }
+        .nav-opener{
+            padding: 10px 5px 5px;
+            .fa-bars{ display: none; }
+            .fa-times{ display: block; }
+        }
+    }
+}
+/*------------------------------------------------------------------
+9. Main / #main
+-------------------------------------------------------------------*/
+#main{ overflow: hidden; }
+/*------------------------------------------------------------------
+10. Banner / .banner
+-------------------------------------------------------------------*/
+.banner{
+    position: relative;
+    .next-section{
+        position: absolute;
+        left: 50%;
+        bottom: -24px;
+        @include font(15px, 20px);
+        padding: 15px 10px;
+        display: block;
+        @include size(49px, 49px);
+        background: $white;
+        box-shadow:  0px 11px 21px 0px rgba(0, 0, 0, 0.09);
+        transform: translateX(-50%);
+        transition: all 0.25s linear;
+        &:hover{ color: $white; }
+    }
+    .block{
+        overflow: hidden;
+        width: 400px;
+        float: right;
+        background: $white;
+        padding: 56px 31px 60px 32px;
+        .holder{
+            overflow: hidden;
+            margin: 0 0 47px;
+            padding: 0 10px;
+        }
+        .heading2{ margin: 0 0 18px; }
+        p{ margin: 0;}
+        .appointment-form{
+            width: 100%;
+            .form-group{
+                margin: 0 0 20px;
+                overflow: hidden;
+            }
+            .form-control{
+                @include font(12px, 14px);
+                color: $clr-1;
+                font-weight: 400;
+                @include size(100%, 50px);
+                border: 1px solid $clr-7;
+                box-shadow: none;
+                outline: none;
+                padding: 12px 35px 10px;
+                margin: 0;
+                background: $clr-15;
+                @include placeholder{ color: $clr-1; }
+                &:hover,
+                &:focus{ border-color: $clr-18; }
+            }
+            .btn-primary{
+                padding: 18px 43px;
+                color: $white;
+                border: none;
+                width: 100%;
+                &:hover{ background: $clr-2; }
+            }
+            .has-error .form-control{
+                color: red;
+                border-color: red;
+                @include placeholder{ color: red; }
+            }
+            .form-message{
+                color: $white;
+                font-size: 11px;
+                font-weight: 600;
+                position: relative;
+                &:after{
+                    top: 14px;
+                    left: 17px;
+                    width: 20px;
+                    content: "";
+                    height: 20px;
+                    border-radius: 50%;
+                    position: absolute;
+                    text-align: center;
+                    font-family:'FontAwesome';
+                }
+                &.error{
+                    margin: 0 0 20px;
+                    background: #ff3333;
+                    padding: 15px 5px 13px 50px;
+                    &:after{
+                        content:"\f00d";
+                        background: #cc2929;
+                    }
+                }
+                &.success{
+                    margin: 0 0 20px;
+                    background: #698cf0;
+                    padding: 15px 5px 13px 50px;
+                    &:after{
+                        content:"\f00c";
+                        background: #5470c0;
+                    }
+                }
+            }
+        }
+    }
+}
+/*------------------------------------------------------------------
+11. Main Slider / .main-slider
+-------------------------------------------------------------------*/
+.main-slider{
+    overflow: hidden;
+    .slide{
+        @include v-align(850px, middle, after);
+    }
+    .caption{
+        padding: 133px 0 0;
+        .title{ margin: 0 0 18px; }
+    }
+    .title{
+        @include font(18px, 20px);
+        color: $clr-7;
+        font-weight: 700;
+        display: block;
+        margin: 0 0 23px;
+        opacity: 0;
+        transform: translateY(-60px);
+        transition: all 0.50s linear;
+    }
+    h1{
+        font: 72px/85px $heading-font-family-sans;
+        font-weight: 700;
+        color: $white;
+        margin: 0 0 46px;
+        opacity: 0;
+        transform: translateY(-80px);
+        transition: all 0.50s linear;
+    }
+    h2{
+        font: 40px/60px $heading-font-family-sans;
+        font-weight: 700;
+        color: $white;
+        margin: 0 0 24px;
+    }
+    .btn-primary{
+        opacity: 0;
+        transform: translateY(60px);
+        transition: all 0.50s linear;
+    }
+    .slick-active{
+        h1,
+        .title,
+        .btn-primary{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .slick-prev,
+    .slick-next{
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+        text-indent: -9999px;
+        border: none;
+        @include size(30px, 100px);
+        background: $clr-5;
+        box-shadow: none;
+        outline: none;
+        overflow: hidden;
+        border-radius: 0 5px 5px 0;
+        transform: translateY(-50%);
+        transition: all 0.25s linear;
+        &:before{
+            position: absolute;
+            left: 10px;
+            top: 40px;
+            content: "\f104";
+            font-family: 'FontAwesome';
+            @include font(15px, 20px);
+            color: $white;
+            text-indent: 0;
+            transition: all 0.25s linear;
+        }
+        &:hover{ &:before{ color: $white;  } }
+    }
+    .slick-prev{ left: 0;}
+    .slick-next{
+        right: 0;
+        border-radius: 5px 0 0 5px;
+        &:before{ content: "\f105";}
+    }
+}
+#particles-js,
+#bgvid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    z-index: -100;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    -webkit-transition: 1s opacity;
+    transition: 1s opacity;
+}
+#bgvid{ background: url("images/polina.jpg") no-repeat; }
+.tv {
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+.tv .screen {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0;
+    margin: auto;
+    position: absolute;
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+}
+.tv .screen.active {opacity: 1;}
+/*------------------------------------------------------------------
+12. Btn Primary / .btn-primary
+-------------------------------------------------------------------*/
+.btn-primary{
+    @include font(12px, 14px);
+    color: $white;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 19px 34px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $white;
+    background: none;
+    transition: all 0.2s linear;
+}
+/*------------------------------------------------------------------
+13. Abt Sec / .abt-sec
+-------------------------------------------------------------------*/
+.abt-sec{
+    overflow: hidden;
+    padding: 135px 0 0;
+    .bg-light{
+        border-top: 1px solid $clr-14;
+        border-bottom: 1px solid $clr-14;
+    }
+    .border{
+        position: relative;
+        &:before{
+            @include element(50%, 0, auto, 0);
+            @include size(100%, 1px);
+            background: $clr-14;
+            transform: translateY(-50%);
+            z-index: 0;
+        }
+    }
+}
+/*------------------------------------------------------------------
+14. Heading / .heading
+-------------------------------------------------------------------*/
+.heading{
+    @include font(28px, 30px);
+    color: $clr-2;
+    font-weight: 700;
+    margin: 0 0 24px;
+}
+/*------------------------------------------------------------------
+15. Heading2 / .heading2
+-------------------------------------------------------------------*/
+.heading2{
+    @include font(20px, 22px);
+    color: $clr-2;
+    font-weight: 700;
+    margin: 0 0 17px;
+}
+/*------------------------------------------------------------------
+16. Header / .header
+-------------------------------------------------------------------*/
+.header{
+    overflow: hidden;
+    margin: 0 0 135px;
+    .border{
+        width: 78px;
+        margin: 0 auto 22px;
+        display: block;
+    }
+    .border2{
+        width: 51px;
+        margin: 0 0 22px;
+        display: block;
+    }
+    .title{
+        font: 14px/16px $font-family-sans-serif;
+        font-weight: 700;
+        display: block;
+        margin: 0 0 22px;
+    }
+    p{ margin: 0; }
+}
+/*------------------------------------------------------------------
+17. Service List / .service-list
+-------------------------------------------------------------------*/
+.service-list{
+    overflow: hidden;
+    margin: 0;
+    li{
+        width: 33.33%;
+        float: left;
+        padding: 92px 64px;
+        border-left: 1px solid $clr-14;
+        &:nth-child(1),
+        &:nth-child(4){ border-left: none; }
+    }
+    .icon{
+        @include font(40px, 40px);
+        margin: 0 0 38px;
+        display: block;
+        &.clr1{ color: $clr-3; }
+        &.clr2{ color: $clr-8; }
+        &.clr3{ color: $clr-9; }
+        &.clr4{ color: $clr-10; }
+        &.clr5{ color: $clr-11; }
+        &.clr6{ color: $clr-12; }
+    }
+    p{ margin: 0; }
+}
+/*------------------------------------------------------------------
+18. Service Sec / .service-sec
+-------------------------------------------------------------------*/
+.service-sec{
+    overflow: hidden;
+    &.style2{
+        .txt-holder{
+            float: left;
+            padding: 140px 177px 167px 20.2%;
+            border-bottom: 1px solid $clr-14;
+        }
+        .service-category{
+            li{
+                float: left;
+                width: 50%;
+            }
+        }
+    }
+    .img-holder{
+        float: left;
+        width: 50%;
+    }
+    .txt-holder{
+        float: right;
+        width: 50%;
+        padding: 137px 0 0 67px;
+    }
+    .header{ margin: 0 0 22px; }
+    .heading{
+        line-height: 40px;
+        margin: 0 0 23px;
+    }
+    .service-category{
+        font-family: $heading-font-family-sans;
+        color: $clr-13;
+        overflow: hidden;
+        margin: 0 0 52px;
+        li{
+            overflow: hidden;
+            margin: 0 0 11px;
+        }
+        .fa{
+            margin: 0 11px 0 0;
+        }
+        a{
+            color: $clr-13;
+            transition: all 0.25s linear;
+        }
+    }
+    .btn-primary{
+        padding: 19px 36px;
+        color: $clr-2;
+        border-color: $clr-2;
+        &:hover{ color: $white; }
+    }
+}
+/*------------------------------------------------------------------
+19. Counter Holder / .counter-holder
+-------------------------------------------------------------------*/
+.counter-holder{
+    overflow: hidden;
+    min-height: 440px;
+    padding: 179px 0;
+    .col{
+        margin: 0 auto;
+        width: 210px;
+    }
+    .icon{
+        @include font(70px, 80px);
+        color: $white;
+        margin: 0 14px 0 0;
+    }
+    .counter{
+        font: 48px/50px $heading-font-family-sans;
+        font-weight: 400;
+        color: $white;
+        display: block;
+        margin: 0 0 10px;
+    }
+    .title{
+        font: 18px/20px $heading-font-family-sans;
+        font-weight: 400;
+        font-style: italic;
+        color: $white;
+        display: block;
+    }
+}
+/*------------------------------------------------------------------
+20. Team Sec / .team-sec
+-------------------------------------------------------------------*/
+.team-sec{
+    overflow: hidden;
+    padding-top: 135px;
+    padding-bottom: 135px;
+    .header{ margin: 0 0 96px; }
+}
+/*------------------------------------------------------------------
+21. Team Col / .team-col
+-------------------------------------------------------------------*/
+.team-col{
+    overflow: hidden;
+    .img-holder{ margin: 0 0 50px; }
+    .desnation{
+        font: 12px/14px $heading-font-family-sans;
+        font-weight: 700;
+        display: block;
+        margin: 0 0 13px;
+    }
+    .heading2{
+        margin: 0 0 17px;
+        display: block;
+        letter-spacing: -1px;
+    }
+    p{ margin: 0 0 36px; }
+    .socail-network{
+        float: none;
+        text-align: left;
+        border: none;
+        li{ margin: 0 15px 0 0; }
+        a{
+            border-width: 1px;
+            border-style: solid;
+            border-color: $clr-7;
+            @include size(45px, 45px);
+            padding: 14px;
+            text-align: center;
+        }
+    }
+}
+/*------------------------------------------------------------------
+22. Testimonail Sec / .testimonail-sec
+-------------------------------------------------------------------*/
+.testimonail-sec{
+    overflow: hidden;
+    min-height: 786px;
+    padding-top: 135px;
+    padding-bottom: 135px;
+    .header{ margin: 0 0 96px; }
+}
+/*------------------------------------------------------------------
+23. Testimonail Slider / .testimonail-slider
+-------------------------------------------------------------------*/
+.testimonail-slider{
+    overflow: hidden;
+    .slide{
+        padding: 44px 31px 46px;
+        margin: 0 15px;
+        outline: none;
+        border: 1px solid $clr-14;
+        background: $white;
+        p{ margin: 0 0 30px; }
+    }
+    .footer{
+        overflow: hidden;
+        .img-holder{
+            width: 21.1%;
+            display: inline-block;
+            vertical-align: middle;
+            img{ width: 100%; }
+        }
+        .txt-holder{
+            width: 77.5%;
+            display: inline-block;
+            vertical-align: middle;
+            padding: 0 0 0 19px;
+        }
+    }
+    .name{
+        font: 14px/16px $heading-font-family-sans;
+        display: block;
+        font-weight: 700;
+        color: $clr-2;
+        margin: 0 0 5px;
+    }
+    .desnation{
+        font: 12px/14px $heading-font-family-sans;
+        display: block;
+    }
+}
+/*------------------------------------------------------------------
+24. Price Sec / .price-sec
+-------------------------------------------------------------------*/
+.price-sec{
+    overflow: hidden;
+    padding-top: 135px;
+    padding-bottom: 135px;
+    .header{ margin: 0 0 96px; }
+}
+/*------------------------------------------------------------------
+25. Price Holder / .price-holder
+-------------------------------------------------------------------*/
+.price-holder{
+    overflow: hidden;
+    margin: 0;
+    padding: 0 0 50px;
+    border: 1px solid $clr-14;
+    &.active{ .btn-primary{ &:hover{ background: $clr-5; } } }
+    li{
+        color: $clr-13;
+        overflow: hidden;
+        padding: 6px 49px 5px;
+        .fa{
+            font-size: 13px;
+            margin: 0 7px 0 0;
+        }
+    }
+    .price-heading{
+        font: 36px/40px $heading-font-family-sans;
+        font-weight: 700;
+        color: $white;
+        padding: 37px 10px;
+        background: $clr-5;
+    }
+    .price-block{
+        padding: 43px 20px;
+        margin: 0 0 49px;
+        border-bottom: 1px solid $clr-14;
+        .price{
+            font: 72px/82px $heading-font-family-sans;
+            font-weight: 400;
+            display: block;
+            margin: 0 0 8px;
+        }
+        .txt{
+            font: 12px/12px $heading-font-family-sans;
+            font-weight: 700;
+            display: block;
+            margin: 0 0 34px;
+        }
+    }
+    .btn-primary{
+        color: $white;
+        padding: 21px 39px;
+        margin: 0 0 7px;
+        background: $clr-5;
+        border: none;
+    }
+}
+/*------------------------------------------------------------------
+26. Offer Sec / .offer-sec
+-------------------------------------------------------------------*/
+.offer-sec{
+    overflow: hidden;
+    padding: 85px 0;
+    min-height: 220px;
+    .header{
+        margin: 0;
+        .title{
+            color: $white;
+            margin: 0 0 10px;
+        }
+    }
+    h2{
+        @include font(22px, 24px);
+        color: $white;
+        margin: 0;
+    }
+    .btn-primary{
+        float: right;
+        &:hover,
+        &:focus,
+        &.focus{
+            border-color: $white;
+            background: $white;
+        }
+    }
+}
+/*------------------------------------------------------------------
+27. Contact Sec / .contact-sec
+-------------------------------------------------------------------*/
+.contact-sec{
+    overflow: hidden;
+    min-height: 878px;
+    position: relative;
+    z-index: 1;
+    .img-holder{
+        float: left;
+        width: 50%;
+    }
+    .txt-holder{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        padding: 137px 0 137px 67px;
+    }
+    .header{ margin: 0 0 46px; }
+    .heading{
+        line-height: 40px;
+        margin: 0 0 23px;
+    }
+    .contact-form{
+        @extend %clearfix;
+        width: 487px;
+        .form-group{
+            overflow: hidden;
+            margin: 0 0 20px;
+        }
+        .form-control{
+            @include font(12px, 14px);
+            color: $clr-1;
+            font-weight: 400;
+            @include size(100%, 50px);
+            border: 1px solid $clr-7;
+            box-shadow: none;
+            outline: none;
+            padding: 12px 35px 10px;
+            margin: 0;
+            background: $clr-15;
+            @include placeholder{ color: $clr-1; }
+            &:hover,
+            &:focus{ border-color: $clr-18; }
+        }
+        textarea{
+            @include font(12px, 14px);
+            color: $clr-1;
+            font-weight: 400;
+            width: 100%;
+            min-height: 175px;
+            resize: none;
+            border: 1px solid $clr-7;
+            border-radius: 30px;
+            box-shadow: none;
+            outline: none;
+            padding: 19px 35px;
+            margin: 0 0 15px;
+            background: $clr-15;
+            @include placeholder{ color: $clr-1; }
+            &:hover,
+            &:focus{ border-color: $clr-18; }
+        }
+        .btn-primary{
+            padding: 19px 42px;
+            color: $white;
+            border: none;
+            &:hover{ background: $clr-5; }
+        }
+        .has-error .form-control{
+            color: red;
+            border-color: red;
+            @include placeholder{ color: red; }
+        }
+        .form-message{
+            color: $white;
+            font-size: 11px;
+            font-weight: 600;
+            position: relative;
+            &:after{
+                top: 14px;
+                left: 17px;
+                width: 20px;
+                content: "";
+                height: 20px;
+                border-radius: 50%;
+                position: absolute;
+                text-align: center;
+                font-family:'FontAwesome';
+            }
+            &.error{
+                margin: 0 0 20px;
+                background: #ff3333;
+                padding: 15px 5px 13px 50px;
+                &:after{
+                    content:"\f00d";
+                    background: #cc2929;
+                }
+            }
+            &.success{
+                margin: 0 0 20px;
+                background: #698cf0;
+                padding: 15px 5px 13px 50px;
+                &:after{
+                    content:"\f00c";
+                    background: #5470c0;
+                }
+            }
+        }
+    }
+}
+/*------------------------------------------------------------------
+28. Fancybox Skin / .fancybox-skin
+-------------------------------------------------------------------*/
+.fancybox-skin{ padding: 0 !important; }
+/*------------------------------------------------------------------
+29. Popup Holder / .popup-holder
+-------------------------------------------------------------------*/
+.popup-holder {
+    position: relative;
+    overflow: hidden;
+    height: 0;
+}
+/*------------------------------------------------------------------
+30. Newsletter Block / .newsletter-block
+-------------------------------------------------------------------*/
+.newsletter-block{
+    overflow: hidden;
+    width: 550px;
+    padding: 65px 31px 68px 32px;
+    .holder{
+        overflow: hidden;
+        margin: 0 0 47px;
+        padding: 0 10px;
+    }
+    .heading2{ margin: 0 0 18px; }
+    p{ margin: 0;}
+    .newsletter-form{
+        width: 100%;
+        margin: 0 0 42px;
+        .form-group{
+            margin: 0 0 20px;
+            overflow: hidden;
+        }
+        .col{
+            width: 50%;
+            float: left;
+            padding: 0 0 0 8px;
+            &:first-child{ padding: 0 8px 0 0; }
+        }
+        .form-control{
+            @include font(12px, 14px);
+            color: $clr-1;
+            font-weight: 400;
+            @include size(100%, 50px);
+            border: 1px solid $clr-7;
+            box-shadow: none;
+            outline: none;
+            padding: 12px 35px 10px;
+            margin: 0;
+            background: $clr-15;
+            @include placeholder{ color: $clr-1; }
+            &:hover,
+            &:focus{ border-color: $clr-18; }
+        }
+        .jcf-select{
+            min-width: 100%;
+            height: 50px;
+            margin: 0;
+            border-color: $clr-7;
+            border-radius: 45px;
+            background: $clr-15;
+            .jcf-select-text{
+                @include font(12px, 14px);
+                color: $clr-1;
+                margin: 18px 35px 0 35px;
+            }
+            .jcf-select-opener{
+                width: 36px;
+                background: none;
+                &:before{
+                    position: absolute;
+                    content: "\f107";
+                    font-family: "FontAwesome";
+                    @include font(12px, 14px);
+                    color: $clr-1;
+                    left: 1px;
+                    top: 17px;
+                }
+            }
+        }
+        .btn-primary{
+            padding: 18px 43px;
+            color: $white;
+            border: none;
+            &:hover{ background: $clr-2; }
+        }
+        .has-error .form-control{
+            color: red;
+            border-color: red;
+            @include placeholder{ color: red; }
+        }
+        .form-message{
+            color: $white;
+            font-size: 11px;
+            font-weight: 600;
+            position: relative;
+            &:after{
+                top: 14px;
+                left: 17px;
+                width: 20px;
+                content: "";
+                height: 20px;
+                border-radius: 50%;
+                position: absolute;
+                text-align: center;
+                font-family:'FontAwesome';
+            }
+            &.error{
+                margin: 0 0 20px;
+                background: #ff3333;
+                padding: 15px 5px 13px 50px;
+                &:after{
+                    content:"\f00d";
+                    background: #cc2929;
+                }
+            }
+            &.success{
+                margin: 0 0 20px;
+                background: #698cf0;
+                padding: 15px 5px 13px 50px;
+                &:after{
+                    content:"\f00c";
+                    background: #5470c0;
+                }
+            }
+        }
+    }
+    .txt{
+        @include font(11px, 13px);
+        color: $clr-13;
+        display: block;
+        a{
+            text-decoration: underline;
+            transition: all 0.25s linear;
+            &:hover{
+                color: $clr-2;
+                text-decoration: none;
+            }
+        }
+    }
+}
+/*------------------------------------------------------------------
+31. Footer / #footer
+-------------------------------------------------------------------*/
+#footer{
+    overflow: hidden;
+    background: $clr-5;
+    .footer-area{
+        padding: 78px 0;
+        overflow: hidden;
+        border-bottom: 1px solid $clr-16;
+        .title{
+            font: 18px/20px $heading-font-family-sans;
+            font-weight: 700;
+            display: block;
+            margin: 0 0 20px;
+        }
+        address{
+            @include font(14px, 22px);
+            color: $white;
+            font-weight: 400;
+            display: block;
+            font-style: normal;
+            margin: 0;
+        }
+        .tel,
+        .mail{
+            @include font(14px, 22px);
+            color: $white;
+            font-weight: 400;
+            display: block;
+            a{
+                color: $white;
+                transition: all 0.25s linear;
+            }
+        }
+    }
+    .footer-holder{
+        padding: 27px 0;
+        color: $white;
+        p{
+            margin: 12px 0 0;
+            a{
+                transition: all 0.25s linear;
+                &:hover{ color: $clr-1; }
+            }
+        }
+    }
+    .socail-network{
+        float: right;
+        border: none;
+        li{ margin: 0 0 0 11px; }
+        a{
+            @include size(45px, 45px);
+            padding: 14px;
+            text-align: center;
+            background: $white;
+            border: none;
+            &:hover{ color: $white; }
+        }
+    }
+}
+/*------------------------------------------------------------------
+32. Back Top / #back-top
+-------------------------------------------------------------------*/
+#back-top {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	@include font(18px, 20px);
+    color: $white;
+    cursor: pointer;
+    float: right;
+    @include size(50px, 50px);
+    padding: 14px 0;
+    z-index: 9;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s ease 0s;
+    &.active{
+    	opacity: 1;
+    	visibility: visible;
+    }
+}
+/*------------------------------------------------------------------
+33. Loader Holder / .loader-holder
+-------------------------------------------------------------------*/
+.loader-holder {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  position: fixed;
+  background-color: rgba($white, 0.9);
+  .block {
+	  top: 50%;
+	  left: 50%;
+	  position: absolute;
+	  transform: translate(-50%, -50%);
+	}
+}
