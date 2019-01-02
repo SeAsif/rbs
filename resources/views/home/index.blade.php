@@ -12,7 +12,7 @@
 			<section id="abt" class="" data-scroll-index="1">
 				<div class="container">
 					<div class="row">
-						<header class="header col-xs-12 text-center">
+						<header class="col-xs-12 text-center">
 							<h2 class="heading">Free Consultation</h2>
 							<span class="border"><img src="rbs/images/border.png" alt="image description" class="img-responsive"></span>
 							<h3>Schedule An Appointment</h3>
