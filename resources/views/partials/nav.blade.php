@@ -1,4 +1,4 @@
-		<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<!-- set the encoding of your site -->
@@ -14,8 +14,8 @@
 	<!-- set the description -->
 	<meta name="description" content="Phoenix - Services HTML Template">
 	<!-- set the Keyword -->
-	<meta name="keywords" content="agency, business, corporate, creative, landing, landing page, lead generation, marketer, marketing, multipurpose, page builder, professional, responsive, seo ">
-	<meta name="author" content="Phoenix - Services HTML Template">
+	<meta name="keywords" content="Retirement Income,Security,Lifetime Income,Future benefits ">
+	<meta name="author" content="Muhammad Asif">
 	<title>RBS | Retirement Benefits Specialists, LLC Maximize Your Retirement Income</title>
 	<!-- include the site stylesheet -->
 	<link href="https://fonts.googleapis.com/css?family=Arimo:400,400i,700%7CRoboto:400,500,700,900" rel="stylesheet">
@@ -35,104 +35,8 @@
 	<link rel="stylesheet" href="rbs/css/responsive.css">
 	<!-- include the site stylesheet -->
 	<style class="rbs/color_css"></style>
-</head>
-<body>
-	<!-- main container of all the page elements -->
-	<div id="wrapper">
-		<!-- header of the page -->
-		<header id="header">
-			<!-- header top of the page -->
-		<!---<div class="header-top">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12">
-							<span class="nav-txt text-uppercase"><i class="icon icon-Pen"></i> welcome to Phoenix template</span>
-							
-							<ul class="list-unstyled socail-network">
-								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-								<li><a href="#"><i class="fa fa-behance"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							</ul>
-							
-						</div>
-					</div>
-				</div>
-			</div>--->
-			<!-- header top of the page end -->
-			<!-- header holder of the page -->
-			<div class="header-holder container">
-				<div class="row">
-					<div class="col-xs-12">
-						<!-- logo of the page -->
-						<div class="logo">
-							<a href="{{('/')}}"><img src="rbs/images/logo.png" alt="Retirement Benefits Specialists" class="img-responsive"></a>
-						</div>
-						<!-- logo of the page end -->
-						<!-- info box of the page -->
-						<ul class="list-unstyled info-box hidden-xs">
-							
-							<li>
-								<span class="icon icon-Phone pull-left" style="color:#CD9C35"></span>
-								<div class="pull-left">
-									<span class="tel" style="margin-top: 7px; font-size: 20px;color:#003322">215-555-5555</span>
-									<span class="mail" style="color:#CE9D36">retirement@gmx.us</span>
-								</div>
-							</li>
-							
-						</ul>
-						<!-- info box of the page end -->
-						<a href="#" class="nav-opener text-center"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-					</div>
-				</div>
-			</div>
-			<!-- header holder of the page end -->
-			<!-- nav holder of the page -->
-			<div class="nav-holder" style="height: 70px;">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12">
-							
-							<!-- nav of the page -->
-							<nav id="nav">
-								<ul class="list-unstyled">
-									<li><a href="{{('/')}}" >Home</a></li>
-									<li><a href="{{('about-us')}}" >About Us</a></li>
-									<li><a href="{{('life-income')}}" >Life income</a></li>
-									<li><a href="{{('retirement-basics')}}" >Retirement basics</a></li>
-									<li><a href="{{('solution')}}" >Solutions</a></li>
-							         <li><a href="{{('carrriers')}}" >Our Carriers</a></li>
-									 <li><a href="{{('blog')}}" >blog</a></li>
-							
-
-								</ul>
-								
-								
-							</nav>
-							<!-- nav of the page end -->
 	
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- nav holder of the page end -->
-		</header>
-		<!-- header of the page end -->
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+	
 		
 		<style>
 		.flashbutton, hover{
@@ -184,12 +88,7 @@
   50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
   100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
 }
-		</style>
 		
-		
-		
-		
-		<style>
 .dropdown {
   position: absolute;
   display: inline-block;
@@ -213,3 +112,71 @@
 
 
 
+</head>
+<body>
+	<!-- main container of all the page elements -->
+	<div id="wrapper">
+		<!-- header of the page -->
+		<header id="header">
+			
+			<!-- header holder of the page -->
+			<div class="header-holder container">
+				<div class="row">
+					<div class="col-xs-12">
+						<!-- logo of the page -->
+						<div class="logo">
+							<a href="{{('/')}}"><img src="rbs/images/logo.png" alt="Retirement Benefits Specialists" class="img-responsive"></a>
+						</div>
+						<!-- logo of the page end -->
+						<!-- info box of the page -->
+						<ul class="list-unstyled info-box hidden-xs">
+							
+							<li>
+								<span class="icon icon-Phone pull-left" style="color:#CD9C35"></span>
+								<div class="pull-left">
+									<span class="tel" style="margin-top: 7px; font-size: 20px;color:#003322">215-555-5555</span>
+									<span class="mail" style="color:#CE9D36">retirement@gmx.us</span>
+								</div>
+							</li>
+							
+						</ul>
+						<!-- info box of the page end -->
+						<a href="#" class="nav-opener text-center"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+					</div>
+				</div>
+			</div>
+			<!-- header holder of the page end -->
+			<!-- nav holder of the page -->
+			<div class="nav-holder" style="height: 70px;">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							
+							<!-- nav of the page -->
+							<nav id="nav">
+								<ul class="list-unstyled">
+									<li><a href="{{('/')}}" >Home</a></li>
+									<li><a href="{{('about-us')}}" >About Us</a></li>
+									<li><a href="{{('retirement-basics')}}" >Retirement Basics</a></li>
+									<li><a href="{{('solution')}}" >Solutions</a></li>
+									<li><a href="{{('life-income')}}" >Lifetime income</a></li>
+							         <li><a href="{{('carrriers')}}" >Carriers</a></li>
+									 <li><a href="{{('blog')}}" >Blog</a></li>
+							
+
+								</ul>
+								
+								
+							</nav>
+							<!-- nav of the page end -->
+	
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- nav holder of the page end -->
+		</header>
+		<!-- header of the page end -->
+		
+		
+		
