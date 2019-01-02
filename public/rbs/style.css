@@ -1007,7 +1007,7 @@ a:hover, a:focus, a.active {
 -------------------------------------------------------------------*/
 .header {
   overflow: hidden;
-  margin: 0 0 135px;
+  margin: 0 0 10px;
 }
 
 .header .border {
