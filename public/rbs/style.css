@@ -951,7 +951,7 @@ a:hover, a:focus, a.active {
 -------------------------------------------------------------------*/
 .abt-sec {
   overflow: hidden;
-  padding: 135px 0 0;
+  padding: 10px 0 0;
 }
 
 .abt-sec .bg-light {
@@ -1007,7 +1007,7 @@ a:hover, a:focus, a.active {
 -------------------------------------------------------------------*/
 .header {
   overflow: hidden;
-  margin: 0 0 135px;
+  margin: 0 0 10px;
 }
 
 .header .border {
