@@ -9,7 +9,7 @@
 
 
 			<!-- abt sec of the page -->
-			<section id="abt" class="abt-sec" data-scroll-index="1">
+			<section id="abt" class="" data-scroll-index="1">
 				<div class="container">
 					<div class="row">
 						<header class="header col-xs-12 text-center">
