@@ -2309,8 +2309,8 @@
             "authors": [
                 {
                     "name": "Tijs Verkoyen",
-                    "email": "css_to_inline_styles@verkoyen.eu",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "css_to_inline_styles@verkoyen.eu"
                 }
             ],
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
@@ -2468,8 +2468,8 @@
             "authors": [
                 {
                     "name": "Filipe Dobreira",
-                    "homepage": "https://github.com/filp",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "homepage": "https://github.com/filp"
                 }
             ],
             "description": "php error handling for cool kids",
@@ -2733,18 +2733,18 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "email": "arne@blankerts.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "arne@blankerts.de"
                 },
                 {
                     "name": "Sebastian Heuer",
-                    "email": "sebastian@phpeople.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "sebastian@phpeople.de"
                 },
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Component for reading phar.io manifest information from a PHP Archive (PHAR)",
@@ -3402,6 +3402,7 @@
                 "mock",
                 "xunit"
             ],
+            "abandoned": true,
             "time": "2018-08-09T05:50:03+00:00"
         },
         {
@@ -3965,26 +3966,26 @@
         },
         {
             "name": "sven/artisan-view",
-            "version": "v3.1.0",
+            "version": "v3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/svenluijten/artisan-view.git",
-                "reference": "c355f6db5d5317558f90fe274cd5b3504316d35f"
+                "reference": "749379444b46cc8865f3c3fe3d9d704b75f202d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/svenluijten/artisan-view/zipball/c355f6db5d5317558f90fe274cd5b3504316d35f",
-                "reference": "c355f6db5d5317558f90fe274cd5b3504316d35f",
+                "url": "https://api.github.com/repos/svenluijten/artisan-view/zipball/749379444b46cc8865f3c3fe3d9d704b75f202d7",
+                "reference": "749379444b46cc8865f3c3fe3d9d704b75f202d7",
                 "shasum": ""
             },
             "require": {
-                "laravel/framework": "5.4.* || 5.5.* || 5.6.* || 5.7.*",
+                "laravel/framework": "^5.4 || ^6.0",
                 "php": "^7.1"
             },
             "require-dev": {
-                "graham-campbell/testbench": "^5.0",
+                "graham-campbell/testbench": "^4.0 || ^5.0",
                 "mockery/mockery": "^1.0",
-                "phpunit/phpunit": "~7.0"
+                "phpunit/phpunit": "^6.5 || ^7.0 || ^8.0"
             },
             "type": "library",
             "extra": {
@@ -4018,7 +4019,7 @@
                 "templates",
                 "views"
             ],
-            "time": "2018-10-02T19:40:46+00:00"
+            "time": "2019-09-03T16:04:52+00:00"
         },
         {
             "name": "symfony/thanks",
@@ -4096,8 +4097,8 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "email": "arne@blankerts.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "arne@blankerts.de"
                 }
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
